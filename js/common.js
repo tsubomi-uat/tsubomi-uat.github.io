@@ -21,3 +21,23 @@ document.addEventListener('DOMContentLoaded', function() {
     // 指定した時間ごとに nextSlide 関数を繰り返し実行（自動再生）
     setInterval(nextSlide, intervalTime);
 });
+
+// 既存のスライドショー処理の下に追記してください
+const menuTrigger = document.getElementById('menu-trigger');
+const sidebar = document.getElementById('sidebar');
+
+menuTrigger.addEventListener('click', function() {
+    // ボタンの三本線をアニメーションさせる
+    this.classList.toggle('active');
+    // サイドバーを出し入れする
+    sidebar.classList.toggle('show');
+});
+
+// メニューリンクをクリックしたら閉じる（利便性のため）
+const sideLinks = document.querySelectorAll('.side-menu a');
+sideLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        menuTrigger.classList.remove('active');
+        sidebar.classList.remove('show');
+    });
+});
