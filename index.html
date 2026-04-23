@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>つぼみ Inc. Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/topHeader.css">
+    <link rel="stylesheet" href="css/topMain.css">
+    <link rel="stylesheet" href="css/sideMenu.css">
+    <link rel="stylesheet" href="css/topTopCompanyImage.css">
 </head>
+
 <body>
     <header>
-        <div class="container header-inner">
+        <div class="headerContents">
             <h1>tsubomi Inc.</h1>
             <div class="menu-trigger" id="menu-trigger">
                 <span></span>
@@ -18,36 +23,38 @@
         </div>
     </header>
 
-    <section class="hero">
-        <div class="slider-container">
-            <div class="slide active" style="background-image: url('img/hero/slide1.jpg');"></div>
-            <div class="slide" style="background-image: url('img/hero/slide2.jpg');"></div>
-            <div class="slide" style="background-image: url('img/hero/slide3.jpg');"></div>
-            <div class="slide" style="background-image: url('img/hero/slide4.jpg');"></div>
-            <div class="slide" style="background-image: url('img/hero/slide5.jpg');"></div>
+    <section class="topCompanyImage">
+        <div class="topCompanyImageSlide">
+            <div class="slide active" style="background-image: url('img/topCompanyImage/slide1.jpg');"></div>
+            <div class="slide" style="background-image: url('img/topCompanyImage/slide2.jpg');"></div>
+            <div class="slide" style="background-image: url('img/topCompanyImage/slide3.jpg');"></div>
+            <div class="slide" style="background-image: url('img/topCompanyImage/slide4.jpg');"></div>
+            <div class="slide" style="background-image: url('img/topCompanyImage/slide5.jpg');"></div>
         </div>
-        <div class="hero-content">
+        <div class="topCompanyImage-text">
             <h2>つぼみ Inc.</h2>
             <p>あなたの心に蕾を咲かせる会社</p>
         </div>
     </section>
 
-    <div class="container page-wrapper">
-        
+    <!--
         <aside class="sidebar" id="sidebar">
-            <h2>MENU</h2>
-            <ul class="side-menu">
-                <li><a href="index.html" class="active">ホーム</a></li>
-                <li><a href="company.html">会社概要</a></li>
-                <li><a href="recruit.html">採用情報</a></li>
-            </ul>
-        </aside>
+        <h2>MENU</h2>
+        <ul class="side-menu">
+            <li><a href="index.html" class="active">ホーム</a></li>
+            <li><a href="company.html">会社概要</a></li>
+            <li><a href="recruit.html">採用情報</a></li>
+        </ul>
+    </aside>
 
+    -->
+
+    <div class="container page-wrapper">
         <main class="main-content">
             <section class="business">
                 <h3 class="section-title">OUR BUSINESS</h3>
                 <div class="grid">
-                    
+
                     <div class="card">
                         <div class="card-img cafe-img" style="background-image: url('img/cafe/cafe1.jpg');"></div>
                         <div class="card-body">
@@ -59,6 +66,9 @@
                             </p>
                             <a href="https://www.instagram.com/kimmys_coffee" class="btn-insta" target="_blank">
                                 Instagram <span>@kimmys_coffee</span>
+                            </a>
+                            <a href="./kimmy's-coffee.html" class="btn-insta" target="_blank">
+                                もっと見る
                             </a>
                         </div>
                     </div>
@@ -81,7 +91,7 @@
                 </div>
             </section>
         </main>
-    </div>
+     </div>
 
     <footer>
         <p>&copy; 2026 つぼみ Inc.</p>
@@ -89,4 +99,5 @@
 
     <script src="js/common.js"></script>
 </body>
+
 </html>

@@ -1,7 +1,7 @@
 // ドキュメントの読み込みが完了してから実行
 document.addEventListener('DOMContentLoaded', function() {
     // --- 1. スライドショー制御 ---
-    const slides = document.querySelectorAll('.hero .slide');
+    const slides = document.querySelectorAll('.topCompanyImage .slide');
     let currentIndex = 0;
     const slideCount = slides.length;
     const intervalTime = 5000; // 5秒に設定（ご提示のコードに合わせました）
