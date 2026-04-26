@@ -1,97 +1,61 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
-    <title>つぼみ Inc. Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/topHeader.css">
-    <link rel="stylesheet" href="css/topMain.css">
-    <link rel="stylesheet" href="css/sideMenu.css">
-    <link rel="stylesheet" href="css/topTopCompanyImage.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tsubomi Inc. Portfolio</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/top.css">
 </head>
-
 <body>
     <header>
-        <div class="headerContents">
-            <h1>tsubomi Inc.</h1>
-            <div class="menu-trigger" id="menu-trigger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        <div class="headerContents container">
+            <h1>Tsubomi Inc.</h1>
         </div>
     </header>
 
-    <section class="topCompanyImage">
-        <div class="topCompanyImageSlide">
-            <div class="slide active" style="background-image: url('img/topCompanyImage/slide1.jpg');"></div>
-            <div class="slide" style="background-image: url('img/topCompanyImage/slide2.jpg');"></div>
-            <div class="slide" style="background-image: url('img/topCompanyImage/slide3.jpg');"></div>
-            <div class="slide" style="background-image: url('img/topCompanyImage/slide4.jpg');"></div>
-            <div class="slide" style="background-image: url('img/topCompanyImage/slide5.jpg');"></div>
+    <section class="slideImages">
+        <div>
+            <div class="slide active" style="background-image: url('img/top/slide1.jpg');"></div>
+            <div class="slide" style="background-image: url('img/top/slide2.jpg');"></div>
+            <div class="slide" style="background-image: url('img/top/slide3.jpg');"></div>
+            <div class="slide" style="background-image: url('img/top/slide4.jpg');"></div>
+            <div class="slide" style="background-image: url('img/top/slide5.jpg');"></div>
         </div>
-        <div class="topCompanyImage-text">
-            <h2>つぼみ Inc.</h2>
-            <p>あなたの心に蕾を咲かせる会社</p>
+        <div class="slideImages-text">
+            <h2>Tsubomi Inc.</h2>
+            <p>それぞれ心に持つ”つぼみ”が、花開く場所を。</p>
         </div>
     </section>
-
-    <!--
-        <aside class="sidebar" id="sidebar">
-        <h2>MENU</h2>
-        <ul class="side-menu">
-            <li><a href="index.html" class="active">ホーム</a></li>
-            <li><a href="company.html">会社概要</a></li>
-            <li><a href="recruit.html">採用情報</a></li>
-        </ul>
-    </aside>
-
-    -->
 
     <div class="container page-wrapper">
         <main class="main-content">
             <section class="business">
                 <h3 class="section-title">OUR BUSINESS</h3>
                 <div class="grid">
-
                     <div class="card">
-                        <div class="card-img cafe-img" style="background-image: url('img/cafe/cafe1.jpg');"></div>
+                        <div class="card-img" style="background-image: url('img/top/thumb_kimmyscoffee1.jpg');"></div>
                         <div class="card-body">
                             <span class="label">SINCE 2020/11/16</span>
                             <h4>@KIMMY'S COFFEE</h4>
-                            <p>
-                                ～いつも、あなたのそばに～<br>
-                                心地よい空間と一杯のコーヒー。
-                            </p>
-                            <a href="https://www.instagram.com/kimmys_coffee" class="btn-insta" target="_blank">
-                                Instagram <span>@kimmys_coffee</span>
-                            </a>
-                            <a href="./kimmy's-coffee.html" class="btn-insta" target="_blank">
-                                もっと見る
-                            </a>
+                            <p>心地よい空間と一杯のコーヒー。</p>
+                            <a href="pages/kimmyscoffee.html" class="btn-more">もっと見る</a>
                         </div>
                     </div>
-
                     <div class="card">
-                        <div class="card-img bread-img" style="background-image: url('img/bread/bread1.jpg');"></div>
+                        <div class="card-img" style="background-image: url('img/top/thumb_mametokome1.jpg');"></div>
                         <div class="card-body">
                             <span class="label new">NEW PROJECT</span>
                             <h4>mametokome</h4>
-                            <p>
-                                ぜんぶにやさしく、ほぐして生きよう<br>
-                                からだにも、こころにも、ちきゅうにも。
-                            </p>
-                            <a href="https://www.instagram.com/mame__to__kome" class="btn-insta" target="_blank">
-                                Instagram <span>@mame__to__kome</span>
-                            </a>
+                            <p>ぜんぶにやさしく、ほぐして生きよう</p>
+                            <!--<a href="pages/mametokome.html" class="btn-more">もっと見る</a>-->
+                            <p class="btn-more" style="background-color: #616161;">Coming Soon</p>
                         </div>
                     </div>
-
                 </div>
             </section>
         </main>
-     </div>
+    </div>
 
     <footer>
         <p>&copy; 2026 つぼみ Inc.</p>
@@ -99,5 +63,4 @@
 
     <script src="js/common.js"></script>
 </body>
-
 </html>
