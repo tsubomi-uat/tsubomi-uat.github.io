@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (slides.length > 0) {
         let currentIndex = 0;
         const slideCount = slides.length;
-        const intervalTime = 5000; // 5秒
+        const intervalTime = 6500; // 5秒
 
         function nextSlide() {
             slides[currentIndex].classList.remove('active');

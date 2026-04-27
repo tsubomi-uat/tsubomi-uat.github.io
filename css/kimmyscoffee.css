@@ -1,6 +1,6 @@
 
 /* コンテンツブロック */
-.feature-block { padding: 80px 0; }
+.feature-block { padding-top: 60px; }
 .feature-container { display: flex; align-items: center; gap: 60px; }
 /* 偶数番目のブロックは左右反転 */
 .feature-block:nth-child(even) .feature-container { flex-direction: row-reverse; }
