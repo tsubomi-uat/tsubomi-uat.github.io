@@ -17,47 +17,52 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+/**
+ * 2. カード画像クリック切り替え制御 (card)
+ * クリック（タップ）するたびに data-images の画像を順次切り替え
+ */
 document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.card');
 
     cards.forEach(card => {
         const cardImg = card.querySelector('.card-img');
         const imagesData = card.getAttribute('data-images');
+        
+        // data-images属性がないカードは何もしない
         if (!imagesData) return;
 
         const images = JSON.parse(imagesData);
         let currentIndex = 0;
-        let intervalId = null;
+        let isAnimating = false; // アニメーション中の連続クリック防止
 
-        const fadeNextImage = () => {
-            const nextIndex = (currentIndex + 1) % images.length;
-            const nextImageUrl = `url('${images[nextIndex]}')`;
+        // クリックイベント
+        card.addEventListener('click', (e) => {
+            // もし <a> タグ（もっと見るボタン等）をクリックした場合は画像切り替えをしない
+            if (e.target.tagName === 'A' || e.target.closest('a')) return;
 
-            // 1. 背面(::before)に「次の画像」をセット
+            if (isAnimating) return; // アニメーション中は無視
+            isAnimating = true;
+
+            // 1. 次の画像のインデックスを決定
+            currentIndex = (currentIndex + 1) % images.length;
+            const nextImageUrl = `url('${images[currentIndex]}')`;
+
+            // 2. 背面レイヤー(::before)に「次の画像」をセット
+            // CSS変数 --next-img を更新
             cardImg.style.setProperty('--next-img', nextImageUrl);
 
-            // 2. 前面(本体)をフェードアウトさせる
+            // 3. 前面(本体)をフェードアウトさせるクラスを付与
             cardImg.classList.add('fade-out');
 
-            // 3. フェード(2秒)が終わったら、前面の画像を更新してパッと表示
+            // 4. CSSの transition (2s) が終わるのを待ってからリセット
             setTimeout(() => {
+                // 背面の画像を本体の背景にコピー
                 cardImg.style.backgroundImage = nextImageUrl;
-                cardImg.classList.remove('fade-out'); // 透明度を1に戻す
-                currentIndex = nextIndex;
-            }, 500); // CSSのtransition(2s)と一致させる[cite: 8, 9]
-        };
-
-        card.addEventListener('mouseenter', () => {
-            if (intervalId) clearInterval(intervalId);
-            // 5秒おきに実行 (表示3秒 + フェード2秒)
-            intervalId = setInterval(fadeNextImage, 3500);
-        });
-
-        card.addEventListener('mouseleave', () => {
-            if (intervalId) {
-                clearInterval(intervalId);
-                intervalId = null;
-            }
+                // クラスを除去して不透明度を1に戻す
+                cardImg.classList.remove('fade-out');
+                
+                isAnimating = false;
+            }, 500); // top.css の transition 秒数と合わせる
         });
     });
 });
