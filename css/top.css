@@ -186,6 +186,50 @@
         font-size: 15px;
     }
 
+    .label { 
+        font-size: 8.5px; 
+        color: #999; 
+        border: 1px solid #999; 
+        padding: 2px 8px; 
+        margin-bottom: 8.5px; 
+        display: inline-block; 
+    }
+
+    .card-body h4{
+        font-size: 15px;
+    }
+
+    .card-body p{
+        font-size: 12px;
+    }
+
+    .btn-more { 
+    display: block; 
+    text-align: center; 
+    padding: 12px; 
+    border: 1px solid #333; 
+    color: #333; 
+    text-decoration: none; 
+    margin-top: 20px; 
+    font-size: 11px; 
+    }
+
+    .btn-more:hover { 
+        background-color: #eee;
+    }
+
+    .btn-instagram { 
+        display: block; 
+        font-family: serif;
+        text-align: center; 
+        padding: 12px; 
+        border: 1px solid #333; 
+        color: #171717; 
+        text-decoration: none; 
+        margin-top: 20px; 
+        font-size: 11px; 
+    }
+
     .our-philosophy {
         padding: 70px 0 90px; /* スマホ用に上下余白を少しタイトに */
     }
@@ -201,7 +245,7 @@
     }
 
     .philosophy-text p {
-        font-size: 10.5px;
+        font-size: 11px;
         line-height: 1.8;
         padding: 0 5px;
         text-align: center/*justify*/;  /* スマホ画面で文字の端を揃えてスッキリ見せる */
