@@ -1,7 +1,7 @@
 /* リセット・共通設定 */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: "Helvetica Neue", Arial, sans-serif; color: #333; background: #fff; line-height: 1.8; }
-.container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+.container { max-width: 85%; margin: 0 auto; padding: 0 20px; }
 
 /* ヘッダー */
 header { padding: 10px 0; border-bottom: 1px solid #eee; position: sticky; top: 0; background: #fff; z-index: 100; }

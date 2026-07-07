@@ -1,4 +1,3 @@
-
 /* ==========================================================================
    事業紹介グリッド (Existing Styles[cite: 9])
    ========================================================================== */
@@ -121,4 +120,88 @@
 */
 .card-img.fade-out {
     opacity: 0;
+}
+
+/* ==========================================================================
+   私たちの想い (our-philosophy) 統一感重視スタイル
+   ========================================================================== */
+.our-philosophy {
+    padding: 100px 0; /* 上下の十分な余白で空気感を演出 */
+    text-align: center;
+    background-position: center;
+}
+
+/* コンテンツ全体の幅制限 */
+.philosophy-content {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 企業理念（メインコピー） */
+.philosophy-concept {
+    font-size: 1.5rem;
+    font-weight: 300;       /* 「私たちのおしごと」のタイトルと統一 */
+    letter-spacing: 2px;
+    color: #222;
+    margin-bottom: 50px;
+    line-height: 1.6;
+}
+
+/* 背景にある想いの文章 */
+.philosophy-text {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;              /* 行間ではなく段落間の心地よい余白 */
+}
+
+.philosophy-text p {
+    font-size: 1.05rem;
+    color: #555;            /* カード内のテキストに近い、強すぎない黒 */
+    line-height: 2;         /* ゆったりとした読みやすさ */
+    letter-spacing: 0.05em;
+    margin: 0;
+}
+
+/* 最後の締めの一文をわずかに強調 */
+.philosophy-highlight {
+    font-weight: 400;
+    color: #333 !important;
+    margin-top: 10px !important;
+}
+
+/* PC時のみ改行するためのクラス */
+.pc-only {
+    display: inline;
+}
+
+/* ==========================================================================
+   レスポンシブ対応（スマホ用）
+   ========================================================================== */
+@media (max-width: 768px) {
+    .our-philosophy {
+        padding: 70px 0 90px; /* スマホ用に上下余白を少しタイトに */
+    }
+
+    .philosophy-concept {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+        padding: 0 10px;
+    }
+
+    .philosophy-text {
+        gap: 24px;
+    }
+
+    .philosophy-text p {
+        font-size: 0.85rem;
+        line-height: 1.8;
+        padding: 0 5px;
+        text-align: justify;  /* スマホ画面で文字の端を揃えてスッキリ見せる */
+    }
+
+    /* スマホでは画面幅に応じて自然に改行させるためPC用の改行を無効化 */
+    .pc-only {
+        display: none;
+    }
 }
