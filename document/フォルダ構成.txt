@@ -1,0 +1,28 @@
+tubomi-uat.github.io
+ |--index.html
+ |--pages/ 
+ |  |-- kimmyscoffee.html
+ |  --- mametokome.html
+ |--css/
+ |  |-- common.css
+ |  |-- top.css
+ |  |-- mametokome.css
+ |  --- kimmyscoffee.css 
+ |--js/
+ |  --- common.js
+ ---images/
+    |-- top/
+    |   |--
+    |   |-- slife1.jpg
+    |   |-- slife2.jpg
+    |   |-- slife3.jpg
+    |   |-- slife4.jpg
+    |   |-- slife5.jpg
+    |   |-- thumb_kimmyscoffee1.jpg
+    |   --- thumb_mametokome1.jpg
+    |-- kimmyscoffee/
+    |   --- kimmyscoffee1.jpg   
+    --- mametokome/
+        --- mametokome1.jpg   
+    
+    

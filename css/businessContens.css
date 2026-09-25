@@ -1,0 +1,56 @@
+/* コンテンツブロック */
+
+.container { 
+    max-width:85%;
+    margin:0 auto;
+}
+
+.feature-container { 
+    display: flex; 
+    align-items: center; 
+    gap: 60px; 
+    margin-top:50px;
+    align-items: flex-start;
+}
+
+.feature-text-box {
+    flex: 1;
+}
+
+.feature-text-sub-box{
+    color: #888; 
+    font-size: 0.8rem;
+}
+/*
+.feature-text-main-box {
+    color: #888; 
+    font-size: 0.8rem;
+}
+*/
+.feature-text-main-box h3 {
+    font-size: 1.6rem; 
+    margin-bottom: 20px; 
+    font-weight: normal;
+}
+
+/* 偶数番目のブロックは左右反転 */
+.feature-container:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.feature-img-box {
+    flex: 1; 
+}
+
+.feature-img-box img { 
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    display: block;
+    max-width: 580px;
+}
+
+@media (max-width: 768px) {
+    .feature-container { flex-direction: column !important; }
+    .feature-img-box { height: 250px; width: 100%; }
+}
