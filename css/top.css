@@ -124,12 +124,90 @@
 .card-img.fade-out {
     opacity:0;
 }
+/* ==========================================================================
+   tubomi株式会社について (about-us)
+   ========================================================================== */
+.about-us {
+    padding:80px 20px 40px;
+    max-width:85%;
+    margin:0 auto;
+    text-align:center;
+}
 
+.about-subtitle {
+    font-size:0.9rem;
+    color:#666;
+    letter-spacing:2px;
+    margin-top:-30px;
+    margin-bottom:30px;
+}
+
+.about-content {
+    max-width:700px;
+    margin:0 auto;
+    line-height:2.2;
+    color:#444;
+    font-size:0.95rem;
+}
+
+/* ==========================================================================
+   私たちの想い (our-philosophy) 改訂スタイル
+   ========================================================================== */
+.our-philosophy {
+    padding:100px 20px;
+    text-align:center;
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    max-width:85%;
+    margin:0 auto;
+}
+
+.philosophy-content {
+    max-width:800px;
+    margin:0 auto;
+    padding:0 20px;
+}
+
+/* 経営理念メインコピー */
+.philosophy-concept {
+    font-size:1.6rem;
+    font-weight:400;
+    letter-spacing:3px;
+    color:#222;
+    margin-bottom:50px;
+    line-height:1.6;
+}
+
+/* 本文テキストブロック */
+.philosophy-text {
+    display:flex;
+    flex-direction:column;
+    gap:36px;
+}
+
+.philosophy-text p {
+    font-size:1rem;
+    color:#444;
+    line-height:2.1;
+    letter-spacing:0.08em;
+    margin:0;
+}
+
+.philosophy-list {
+    line-height:2.4 !important;
+}
+
+.philosophy-highlight {
+    font-weight:500;
+    color:#222 !important;
+}
 /* ==========================================================================
    私たちの想い (our-philosophy) 統一感重視スタイル
    ========================================================================== */
+/*
 .our-philosophy {
-    padding:100px 20px; /* 上下の十分な余白で空気感を演出 */
+    padding:100px 20px;
     text-align:center;
     background-position:center;
     max-width:85%;
@@ -139,6 +217,7 @@
 }
 
 /* コンテンツ全体の幅制限 */
+/*
 .philosophy-content {
     max-width:100%;
     margin:0 auto;
@@ -146,9 +225,10 @@
 }
 
 /* 企業理念（メインコピー） */
+/*
 .philosophy-concept {
     font-size:1.5rem;
-    font-weight:300;       /* 「私たちのおしごと」のタイトルと統一 */
+    font-weight:300;
     letter-spacing:2px;
     color:#222;
     margin-bottom:50px;
@@ -156,21 +236,23 @@
 }
 
 /* 背景にある想いの文章 */
+/*
 .philosophy-text {
     display:flex;
     flex-direction:column;
-    gap:32px;              /* 行間ではなく段落間の心地よい余白 */
+    gap:32px;
 }
 
 .philosophy-text p {
     font-size:1.05rem;
-    color:#555;            /* カード内のテキストに近い、強すぎない黒 */
-    line-height:2;         /* ゆったりとした読みやすさ */
+    color:#555;
+    line-height:2;
     letter-spacing:0.05em;
     margin:0;
 }
 
 /* 最後の締めの一文をわずかに強調 */
+/*
 .philosophy-highlight {
     font-weight:400;
     color:#333 !important;
@@ -178,6 +260,7 @@
 }
 
 /* PC時のみ改行するためのクラス */
+/*
 .pc-only {
     display:inline;
 }
