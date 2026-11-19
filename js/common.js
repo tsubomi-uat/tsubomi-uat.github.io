@@ -1,68 +1,98 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // --- スライドショー制御 (TOPページ専用) ---
-    const slides = document.querySelectorAll('.slideImages .slide');
-    
-    if (slides.length > 0) {
-        let currentIndex = 0;
-        const slideCount = slides.length;
-        const intervalTime = 6500; // 5秒
-
-        function nextSlide() {
-            slides[currentIndex].classList.remove('active');
-            currentIndex = (currentIndex + 1) % slideCount;
-            slides[currentIndex].classList.add('active');
-        }
-
-        setInterval(nextSlide, intervalTime);
-    }
-});
-
 /**
- * 2. カード画像クリック切り替え制御 (card)
- * クリック（タップ）するたびに data-images の画像を順次切り替え
+ * つぼみ株式会社 共通スクリプト
+ * 1. メインビジュアルのスライドショー
+ * 2. スマホ用メニューの開閉
+ * 3. スクロールしたときのヘッダーの区切り線
+ * 4. スクロールに応じたフェードイン
  */
 document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.card');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    cards.forEach(card => {
-        const cardImg = card.querySelector('.card-img');
-        const imagesData = card.getAttribute('data-images');
-        
-        // data-images属性がないカードは何もしない
-        if (!imagesData) return;
+    /* ------------------------------------------------------------------
+       1. スライドショー
+       ------------------------------------------------------------------ */
+    const slides = document.querySelectorAll('.hero__slide');
 
-        const images = JSON.parse(imagesData);
-        let currentIndex = 0;
-        let isAnimating = false; // アニメーション中の連続クリック防止
+    if (slides.length > 1 && !reduceMotion) {
+        let current = 0;
+        const INTERVAL = 6500;
 
-        // クリックイベント
-        card.addEventListener('click', (e) => {
-            // もし <a> タグ（もっと見るボタン等）をクリックした場合は画像切り替えをしない
-            if (e.target.tagName === 'A' || e.target.closest('a')) return;
+        setInterval(() => {
+            slides[current].classList.remove('is-active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('is-active');
+        }, INTERVAL);
+    }
 
-            if (isAnimating) return; // アニメーション中は無視
-            isAnimating = true;
+    /* ------------------------------------------------------------------
+       2. スマホ用メニュー
+       ------------------------------------------------------------------ */
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('global-nav');
 
-            // 1. 次の画像のインデックスを決定
-            currentIndex = (currentIndex + 1) % images.length;
-            const nextImageUrl = `url('${images[currentIndex]}')`;
+    if (toggle && nav) {
+        const setMenu = (open) => {
+            toggle.setAttribute('aria-expanded', String(open));
+            toggle.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+            nav.classList.toggle('is-open', open);
+            document.body.classList.toggle('is-menu-open', open);
+        };
 
-            // 2. 背面レイヤー(::before)に「次の画像」をセット
-            // CSS変数 --next-img を更新
-            cardImg.style.setProperty('--next-img', nextImageUrl);
-
-            // 3. 前面(本体)をフェードアウトさせるクラスを付与
-            cardImg.classList.add('fade-out');
-
-            // 4. CSSの transition (2s) が終わるのを待ってからリセット
-            setTimeout(() => {
-                // 背面の画像を本体の背景にコピー
-                cardImg.style.backgroundImage = nextImageUrl;
-                // クラスを除去して不透明度を1に戻す
-                cardImg.classList.remove('fade-out');
-                
-                isAnimating = false;
-            }, 500); // top.css の transition 秒数と合わせる
+        toggle.addEventListener('click', () => {
+            setMenu(toggle.getAttribute('aria-expanded') !== 'true');
         });
-    });
+
+        // メニュー内のリンクを押したら閉じる
+        nav.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => setMenu(false));
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') setMenu(false);
+        });
+
+        // メニューの外側（ヘッダー以外）をタップしたら閉じる
+        document.addEventListener('click', (e) => {
+            if (nav.classList.contains('is-open') && !e.target.closest('.site-header')) {
+                setMenu(false);
+            }
+        });
+
+        // PC幅に広げたときは閉じた状態に戻す
+        window.matchMedia('(min-width: 1024px)').addEventListener('change', (e) => {
+            if (e.matches) setMenu(false);
+        });
+    }
+
+    /* ------------------------------------------------------------------
+       3. ヘッダーの区切り線
+       ------------------------------------------------------------------ */
+    const header = document.querySelector('.site-header');
+
+    if (header) {
+        const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+    }
+
+    /* ------------------------------------------------------------------
+       4. フェードイン
+       ------------------------------------------------------------------ */
+    const fadeTargets = document.querySelectorAll('.fade-in');
+
+    if (!('IntersectionObserver' in window) || reduceMotion) {
+        fadeTargets.forEach((el) => el.classList.add('is-visible'));
+        return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+
+    fadeTargets.forEach((el) => observer.observe(el));
 });

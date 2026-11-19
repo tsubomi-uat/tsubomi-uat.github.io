@@ -3,128 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tsubomi Inc. Portfolio</title>
+    <title>Tsubomi Inc. | つぼみ株式会社</title>
+    <meta name="description" content="つぼみ株式会社のコーポレートサイト。＠KIMMY'S COFFEE、mame to kome、CAÄSIUNA を通じて、それぞれ心に持つ“つぼみ”が花開く場所をつくります。">
+    <script>document.documentElement.classList.add('js');</script>
+
+    <!-- Google Fonts（無料・登録不要） -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap">
+
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/top.css">
 </head>
 <body>
-    <header>
-        <div class="headerContents">
-            <h1 onclick="location.href='./index.html'">Tsubomi Inc.</h1>
+    <!-- ================= ヘッダー ================= -->
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="./index.html" class="site-logo" aria-label="Tsubomi Inc. トップページ">
+                <span class="site-logo__en">Tsubomi Inc.</span>
+                <span class="site-logo__ja">つぼみ株式会社</span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開く">
+                <span class="nav-toggle__line"></span>
+                <span class="nav-toggle__line"></span>
+            </button>
+
+            <nav class="global-nav" id="global-nav" aria-label="グローバルナビゲーション">
+                <ul class="global-nav__list">
+                    <li><a href="#about" class="global-nav__link"><span class="global-nav__en">About</span><span class="global-nav__ja">会社概要</span></a></li>
+                    <li><a href="#brands" class="global-nav__link"><span class="global-nav__en">Brands</span><span class="global-nav__ja">事業一覧</span></a></li>
+                    <li><a href="#philosophy" class="global-nav__link"><span class="global-nav__en">Philosophy</span><span class="global-nav__ja">理念</span></a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <section class="slideImages">
-        <div>
-            <div class="slide active" style="background-image: url('img/top/slide1.jpg');"></div>
-            <div class="slide" style="background-image: url('img/top/slide2.jpg');"></div>
-            <div class="slide" style="background-image: url('img/top/slide3.jpg');"></div>
-            <div class="slide" style="background-image: url('img/top/slide4.jpg');"></div>
-            <div class="slide" style="background-image: url('img/top/slide5.jpg');"></div>
+    <!-- ================= メインビジュアル ================= -->
+    <section class="hero" aria-label="メインビジュアル">
+        <div class="hero__slides" aria-hidden="true">
+            <img class="hero__slide is-active" src="img/top/slide1.jpg" alt="" fetchpriority="high" decoding="async">
+            <img class="hero__slide" src="img/top/slide2.jpg" alt="" loading="lazy" decoding="async">
+            <img class="hero__slide" src="img/top/slide3.jpg" alt="" loading="lazy" decoding="async">
+            <img class="hero__slide" src="img/top/slide4.jpg" alt="" loading="lazy" decoding="async">
+            <img class="hero__slide" src="img/top/slide5.jpg" alt="" loading="lazy" decoding="async">
         </div>
-        <div class="slideImages-text">
-            <h2 class="slideImages-title">Tsubomi Inc.</h2>
-            <p class="slideImages-subtitle">それぞれ心に持つ”つぼみ”が、花開く場所を。</p>
+        <div class="hero__overlay"></div>
+        <div class="hero__text">
+            <h1 class="hero__title">Tsubomi Inc.</h1>
+            <p class="hero__subtitle">それぞれ心に持つ”つぼみ”が、<br>花開く場所を。</p>
         </div>
+        <span class="hero__scroll">Scroll</span>
     </section>
 
-
-    <main class="main-content">
-        
-        <section class="about-us">
-            <h3 class="section-title">つぼみ株式会社とは</h3>
-            <div class="about-content">
-                <p>
-                    私たちが目指すのは、誰もが自分らしく花開く場所と機会をつくることです。<br>
-                    食や空間を通じて人と人とをつなぎ、日々の生活に小さな彩りと新しい可能性をお届けします。
-                </p>
-            </div>
-        </section>
-        
-        <section class="business">
-            <h3 class="section-title">私たちのおしごと</h3>
-            <div class="grid">
-                <div class="card" 
-                    data-images=
-                        '["img/top/thumb_kimmyscoffee1.jpg", "img/top/thumb_kimmyscoffee2.jpg", "img/top/thumb_kimmyscoffee3.jpg", "img/top/thumb_kimmyscoffee4.jpg", "img/top/thumb_kimmyscoffee5.jpg"]'
-                    >
-                    <div class="card-img" style="background-image: url('img/top/thumb_kimmyscoffee1.jpg');"></div>
-                    <div class="card-body">
-                        <span class="label">SINCE 2020/11/16</span>
-                        <h4>@KIMMY'S COFFEE</h4>
-                        <p>
-                            あなたに、
-                            <br>
-                            あなたの一杯に寄り添う
-                        </p>
-                        <a href="pages/kimmyscoffee.html" class="btn-more">もっと見る</a>
-                        <a href="https://www.instagram.com/kimmys_coffee?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="btn-instagram">Instagram</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img" style="background-image: url('img/top/thumb_mametokome1.jpg');"></div>
-                    <div class="card-body">
-                        <span class="label new">NEW PROJECT</span>
-                        <h4>mame to kome</h4>
-                        <p>
-                            ぜんぶにやさしく、
-                            <br>
-                            ほぐして生きよう
-                        </p>
-                        <a href="pages/mame_to_kome.html" class="btn-more">もっと見る</a>
-                        <a href="https://www.instagram.com/mame__to__kome?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="btn-instagram">Instagram</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img" style="background-image: url('img/top/thumb_caasiuna1.jpg');"></div>
-                    <div class="card-body">
-                        <span class="label new">PROJECT</span>
-                        <h4>CAÄSIUNA</h4>
-                        <p>
-                            人とのつながりを大切に、
-                            <br>
-                            居心地のいい場所を
-                        </p>
-                        <a href="pages/caasiuna.html" class="btn-more">もっと見る</a>
-                        <a href="https://www.instagram.com/caasiuna?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="btn-instagram">Instagram</a>
-                    </div>
+    <main>
+        <!-- ================= About ================= -->
+        <section class="section about" id="about">
+            <div class="inner inner--narrow">
+                <h2 class="section-heading fade-in">
+                    <span class="section-heading__en">About</span>
+                    <span class="section-heading__ja">つぼみ株式会社とは</span>
+                </h2>
+                <div class="about__body fade-in">
+                    <p>私たちが目指すのは、<br>誰もが自分らしく花開く<br class="br-pc">場所と機会をつくることです。</p>
+                    <p>食や空間を通じて人と人とをつなぎ、<br>日々の生活に小さな彩りと<br class="br-pc">新しい可能性をお届けします。</p>
                 </div>
             </div>
         </section>
 
-        <section class="our-philosophy">
-            <h3 class="section-title">私たちの想い</h3>
-            <div class="philosophy-content">
-                <div class="philosophy-text">
-                    <p class="philosophy-concept">人が自分らしく生きられる環境をつくる</p>
-                    
-                    <p class="philosophy-group">
+        <!-- ================= Our Brands ================= -->
+        <section class="section section--alt brands" id="brands">
+            <div class="inner">
+                <h2 class="section-heading fade-in">
+                    <span class="section-heading__en">Our Brands</span>
+                    <span class="section-heading__ja">私たちのおしごと</span>
+                </h2>
+
+                <!-- ブランドを追加するときは <article class="brand-card"> を1つ複製します -->
+                <div class="brand-grid">
+                    <article class="brand-card fade-in" data-brand="kimmyscoffee">
+                        <a href="pages/kimmyscoffee.html" class="brand-card__media" tabindex="-1" aria-hidden="true">
+                            <img src="img/top/thumb_kimmyscoffee1.jpg" alt="" loading="lazy" decoding="async" width="600" height="600">
+                        </a>
+                        <div class="brand-card__body">
+                            <div class="brand-card__meta">
+                                <span class="brand-card__label">Since 2020.11.16</span>
+                                <span class="brand-card__category">スペシャルティコーヒー</span>
+                            </div>
+                            <h3 class="brand-card__name">@KIMMY'S COFFEE</h3>
+                            <p class="brand-card__catch">あなたに、<br>あなたの一杯に寄り添う</p>
+                            <div class="brand-card__actions">
+                                <a href="pages/kimmyscoffee.html" class="btn btn--primary">もっと見る<span class="btn__arrow" aria-hidden="true">→</span></a>
+                                <a href="https://www.instagram.com/kimmys_coffee/" class="btn btn--sub" target="_blank" rel="noopener">
+                                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.8" fill="currentColor" stroke="none"/></svg>
+                                    Instagram
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="brand-card fade-in" data-brand="mametokome" style="--fade-delay: 0.12s;">
+                        <a href="pages/mame_to_kome.html" class="brand-card__media" tabindex="-1" aria-hidden="true">
+                            <img src="img/top/thumb_mametokome1.jpg" alt="" loading="lazy" decoding="async" width="600" height="600">
+                        </a>
+                        <div class="brand-card__body">
+                            <div class="brand-card__meta">
+                                <span class="brand-card__label">New Project</span>
+                                <span class="brand-card__category">焙煎・米粉事業</span>
+                            </div>
+                            <h3 class="brand-card__name">mame to kome</h3>
+                            <p class="brand-card__catch">ぜんぶにやさしく、<br>ほぐして生きよう</p>
+                            <div class="brand-card__actions">
+                                <a href="pages/mame_to_kome.html" class="btn btn--primary">もっと見る<span class="btn__arrow" aria-hidden="true">→</span></a>
+                                <a href="https://www.instagram.com/mame__to__kome/" class="btn btn--sub" target="_blank" rel="noopener">
+                                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.8" fill="currentColor" stroke="none"/></svg>
+                                    Instagram
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="brand-card fade-in" data-brand="caasiuna" style="--fade-delay: 0.24s;">
+                        <a href="pages/caasiuna.html" class="brand-card__media" tabindex="-1" aria-hidden="true">
+                            <img src="img/top/thumb_caasiuna1.jpg" alt="" loading="lazy" decoding="async" width="600" height="600">
+                        </a>
+                        <div class="brand-card__body">
+                            <div class="brand-card__meta">
+                                <span class="brand-card__label">Project</span>
+                                <span class="brand-card__category">米粉パンのカフェ</span>
+                            </div>
+                            <h3 class="brand-card__name">CAÄSIUNA</h3>
+                            <p class="brand-card__catch">人とのつながりを大切に、<br>居心地のいい場所を</p>
+                            <div class="brand-card__actions">
+                                <a href="pages/caasiuna.html" class="btn btn--primary">もっと見る<span class="btn__arrow" aria-hidden="true">→</span></a>
+                                <a href="https://www.instagram.com/caasiuna/" class="btn btn--sub" target="_blank" rel="noopener">
+                                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.8" fill="currentColor" stroke="none"/></svg>
+                                    Instagram
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= Philosophy ================= -->
+        <section class="section philosophy" id="philosophy">
+            <div class="inner inner--narrow">
+                <h2 class="section-heading fade-in">
+                    <span class="section-heading__en">Philosophy</span>
+                    <span class="section-heading__ja">私たちの想い</span>
+                </h2>
+
+                <p class="philosophy__concept fade-in">人が自分らしく<br>生きられる環境をつくる</p>
+
+                <div class="philosophy__body">
+                    <p class="fade-in">
                         働くことも<br>
                         食べることも<br>
                         学ぶことも<br>
                         人とつながることも
                     </p>
-                    
-                    <p class="philosophy-group">
+                    <p class="fade-in">
                         日々の小さな選択や環境の積み重ねが<br>
-                        その人の人生をつくっていくと考えています
+                        その人の人生をつくっていくと<br class="br-sp">考えています
                     </p>
-                    
-                    <p class="philosophy-group">
+                    <p class="fade-in">
                         つぼみ株式会社は<br>
                         一人ひとりの個性や価値観を尊重し<br>
                         挑戦できること<br>
                         安心できること<br>
                         自分らしくいられることを大切にします
                     </p>
-                    
-                    <p class="philosophy-group">
+                    <p class="fade-in">
                         人と人<br>
                         人と場所<br>
                         人と新しい可能性をつなぎ
                     </p>
-                    
-                    <p class="philosophy-group">
+                    <p class="fade-in">
                         それぞれが自分の人生を<br>
                         より生きやすく<br>
                         より豊かにしていけるきっかけをつくります
@@ -132,12 +188,56 @@
                 </div>
             </div>
         </section>
-
     </main>
 
+    <!-- ================= フッター ================= -->
+    <footer class="site-footer">
+        <div class="inner">
+            <div class="site-footer__grid">
+                <div>
+                    <a href="./index.html" class="site-logo">
+                        <span class="site-logo__en">Tsubomi Inc.</span>
+                        <span class="site-logo__ja">つぼみ株式会社</span>
+                    </a>
+                    <p class="site-footer__concept">それぞれ心に持つ”つぼみ”が、<br>花開く場所を。</p>
+                </div>
 
-    <footer>
-        <p>&copy; 2026 つぼみ Inc.</p>
+                <div>
+                    <h2 class="site-footer__heading">Brands</h2>
+                    <ul class="footer-list">
+                        <li class="footer-list__item">
+                            <a href="pages/kimmyscoffee.html" class="footer-list__link">@KIMMY'S COFFEE</a>
+                            <a href="https://www.instagram.com/kimmys_coffee/" class="footer-list__sns" target="_blank" rel="noopener" aria-label="@KIMMY'S COFFEE の Instagram">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.8" fill="currentColor" stroke="none"/></svg>
+                            </a>
+                        </li>
+                        <li class="footer-list__item">
+                            <a href="pages/mame_to_kome.html" class="footer-list__link">mame to kome</a>
+                            <a href="https://www.instagram.com/mame__to__kome/" class="footer-list__sns" target="_blank" rel="noopener" aria-label="mame to kome の Instagram">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.8" fill="currentColor" stroke="none"/></svg>
+                            </a>
+                        </li>
+                        <li class="footer-list__item">
+                            <a href="pages/caasiuna.html" class="footer-list__link">CAÄSIUNA</a>
+                            <a href="https://www.instagram.com/caasiuna/" class="footer-list__sns" target="_blank" rel="noopener" aria-label="CAÄSIUNA の Instagram">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.8" fill="currentColor" stroke="none"/></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="site-footer__heading">Menu</h2>
+                    <ul class="footer-list">
+                        <li><a href="#about" class="footer-list__link">会社概要</a></li>
+                        <li><a href="#brands" class="footer-list__link">事業一覧</a></li>
+                        <li><a href="#philosophy" class="footer-list__link">理念</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="site-footer__copy"><small>&copy; 2026 Tsubomi Inc.</small></p>
+        </div>
     </footer>
 
     <script src="js/common.js"></script>

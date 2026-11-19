@@ -3,118 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KIMMY'S COFFEE | Tsubomi Inc.</title>
+    <title>@KIMMY'S COFFEE | Tsubomi Inc.</title>
+    <meta name="description" content="@KIMMY'S COFFEE｜日常にそっと寄り添う、あなたを整えるための余白。つぼみ株式会社のスペシャルティコーヒーブランドです。">
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap">
+
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/businessContens.css">
 </head>
-<body>
-    <header>
-        <div class="headerContents">
-            <h1 onclick="location.href='../index.html'" style="cursor:pointer;">Tsubomi Inc.</h1>
+<body data-brand="kimmyscoffee">
+    <!-- ================= ヘッダー ================= -->
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="../index.html" class="site-logo" aria-label="Tsubomi Inc. トップページ">
+                <span class="site-logo__en">Tsubomi Inc.</span>
+                <span class="site-logo__ja">つぼみ株式会社</span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開く">
+                <span class="nav-toggle__line"></span>
+                <span class="nav-toggle__line"></span>
+            </button>
+
+            <nav class="global-nav" id="global-nav" aria-label="グローバルナビゲーション">
+                <ul class="global-nav__list">
+                    <li><a href="../index.html#about" class="global-nav__link"><span class="global-nav__en">About</span><span class="global-nav__ja">会社概要</span></a></li>
+                    <li><a href="../index.html#brands" class="global-nav__link"><span class="global-nav__en">Brands</span><span class="global-nav__ja">事業一覧</span></a></li>
+                    <li><a href="../index.html#philosophy" class="global-nav__link"><span class="global-nav__en">Philosophy</span><span class="global-nav__ja">理念</span></a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <section class="slideImages">
-        <div>
-            <div class="slide active" style="background-image: url('../img/kimmyscoffee/kimmyscoffee1.jpg');"></div>
-            <div class="slide" style="background-image: url('../img/kimmyscoffee/kimmyscoffee2.jpg');"></div>
-            <div class="slide" style="background-image: url('../img/kimmyscoffee/kimmyscoffee3.jpg');"></div>
-            <div class="slide" style="background-image: url('../img/kimmyscoffee/kimmyscoffee4.jpg');"></div>
+    <!-- ================= メインビジュアル ================= -->
+    <section class="hero hero--sub" aria-label="メインビジュアル">
+        <div class="hero__slides" aria-hidden="true">
+            <img class="hero__slide is-active" src="../img/kimmyscoffee/kimmyscoffee1.jpg" alt="" fetchpriority="high" decoding="async">
+            <img class="hero__slide" src="../img/kimmyscoffee/kimmyscoffee2.jpg" alt="" loading="lazy" decoding="async">
+            <img class="hero__slide" src="../img/kimmyscoffee/kimmyscoffee3.jpg" alt="" loading="lazy" decoding="async">
+            <img class="hero__slide" src="../img/kimmyscoffee/kimmyscoffee4.jpg" alt="" loading="lazy" decoding="async">
         </div>
-        <div class="slideImages-text">
-            <h2 class="slideImages-title">@KIMMY'S COFFEE</h2>
-            <p class="slideImages-subtitle">日常にそっと寄り添う<br>あなたを整えるための余白</p>
+        <div class="hero__overlay"></div>
+        <div class="hero__text">
+            <p class="brand-hero__label">Brand 01</p>
+            <h1 class="hero__title">@KIMMY'S COFFEE</h1>
+            <p class="hero__subtitle">日常にそっと寄り添う<br>あなたを整えるための余白</p>
         </div>
     </section>
 
-    <!--
-    <section class="businessSummary">
-        <div class="slideImages-text">
-            <h2 class="slideImages-title">@KIMMY'S COFFEE</h2>
-            <p class="slideImages-subtitle">日常にそっと寄り添う<br>あなたを整えるための余白</p>
-        </div>
-    </section>    
-    -->
+    <main>
+        <div class="section">
+            <div class="inner features">
+                <section class="feature fade-in">
+                    <div class="feature__media">
+                        <img src="../img/kimmyscoffee/kimmyscoffee-contents1.jpg" alt="洗練された空間" loading="lazy" decoding="async">
+                    </div>
+                    <div class="feature__text">
+                        <p class="feature__label" data-num="01">Space &amp; Experience</p>
+                        <h2 class="feature__title">ささやかな余白を、<br>扉を開けた瞬間に。</h2>
+                        <div class="feature__body">
+                            <p>KIMMY'S COFFEEが何よりも大切にしているのは、慌ただしい日々の中で心の余裕を生む「ささやかな余白」をお届けすること。</p>
+                            <p>大きな窓から差し込む日の光と、自然体でいられる心地よい空気感。私たちが提供する空間が、お客様の「前を向く力」となるように、いつでも温かくお迎えいたします。</p>
+                        </div>
+                    </div>
+                </section>
 
-    <main class="container">
-        <div class="feature-container">
-            <div class="feature-text-box">
-                <p class="feature-text-sub-box">SPACE & EXPERIENCE</p>
-                <div class="feature-text-main-box">
-                    <h3>ささやかな余白を、<br>扉を開けた瞬間に。</h3>
-                    <p>KIMMY'S COFFEEが何よりも大切にしているのは、
-                        <br>
-                        慌ただしい日々の中で心の余裕を生む「ささやかな余白」をお届けすること。
-                        <br><br>
-                        大きな窓から差し込む日の光と、自然体でいられる心地よい空気感。
-                        <br>
-                        私たちが提供する空間が、お客様の「前を向く力」となるように、
-                        <br>
-                        いつでも温かくお迎えいたします。 
-                    </p>
-                </div>
-            </div>
-            <div class="feature-img-box">
-                <img src="../img/kimmyscoffee/kimmyscoffee-contents1.jpg" alt="洗練された空間">
-            </div>
-        </div>
+                <section class="feature fade-in">
+                    <div class="feature__media">
+                        <img src="../img/kimmyscoffee/kimmyscoffee-contents2.jpg" alt="こだわりのメニュー" loading="lazy" decoding="async">
+                    </div>
+                    <div class="feature__text">
+                        <p class="feature__label" data-num="02">Product Quality</p>
+                        <h2 class="feature__title">「みんなの美味しい」に<br>応えるメニュー。</h2>
+                        <div class="feature__body">
+                            <p>高品質なコーヒー豆を厳選して仕入れています。店内に漂うコーヒーの香りに包まれ、ほっと一息つく時間をお過ごしください。</p>
+                            <p>グルテンフリーやヴィーガンなど、心と体に優しいスイーツを揃えているのは、食の制限がある方にも「我慢」ではなく「選ぶ楽しさ」を感じてほしいから。どうぞ安心してお選びください。</p>
+                        </div>
+                    </div>
+                </section>
 
-        <div class="feature-container">
-            <div class="feature-text-box">
-                <p class="feature-text-sub-box">PRODUCT QUALITY</p>
-                <div class="feature-text-main-box">
-                    <h3>「みんなの美味しい」に<br>応えるメニュー。</h3>
-                    <p>
-                        高品質なコーヒー豆を厳選して仕入れています。
-                        <br>
-                        店内に漂うコーヒーの香りに包まれ、ほっと一息つく時間をお過ごしください。
-                        <br><br>
-                        グルテンフリーやヴィーガンなど、心と体に優しいスイーツを揃えているのは、
-                        <br>
-                        食の制限がある方にも「我慢」ではなく「選ぶ楽しさ」を感じてほしいから。
-                        <br>
-                        どうぞ安心してお選びください。
-                    </p>
-                </div>
-                
-            </div>
-            <div class="feature-img-box">
-                <img src="../img/kimmyscoffee/kimmyscoffee-contents2.jpg" alt="こだわりのメニュー">
+                <section class="feature fade-in">
+                    <div class="feature__media">
+                        <img src="../img/kimmyscoffee/kimmyscoffee-contents3.jpg" alt="いつもの場所" loading="lazy" decoding="async">
+                    </div>
+                    <div class="feature__text">
+                        <p class="feature__label" data-num="03">Community</p>
+                        <h2 class="feature__title">365日の暮らしの中に、<br>自然と溶け込む存在に。</h2>
+                        <div class="feature__body">
+                            <p>KIMMY'S COFFEEは、特別な日だけでなく、あなたの日常の中に自然と溶け込む存在でありたいと願っています。ふと思い出したときに立ち寄れば、いつも変わらない安心感で迎えてくれる。</p>
+                            <p>そんな、地域の人々に愛され続ける「いつもの場所」を心に置いています。日常を彩るささやかな喜びを提供できることを、心より楽しみにしております。</p>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
 
-        <div class="feature-container">
-            <div class="feature-text-box">
-                <p class="feature-text-sub-box">COMMUNITY</p>
-                <div class="feature-text-main-box">
-                    <h3>
-                        365日の暮らしの中に、
-                        <br>自然と溶け込む存在に。
-                    </h3>
-                    <p>
-                        KIMMY'S COFFEEは、特別な日だけでなく、
-                        <br>
-                        あなたの日常の中に自然と溶け込む存在でありたいと願っています。
-                        <br>
-                        ふと思い出したときに立ち寄れば、いつも変わらない安心感で迎えてくれる。
-                        <br>
-                        <br>
-                        そんな、地域の人々に愛され続ける「いつもの場所」を心に置いています。
-                        <br>
-                        日常を彩るささやかな喜びを提供できることを、心より楽しみにしております。
-                    </p> 
-                </div>
-                                   
-            </div>
-            <div class="feature-img-box">
-                <img src="../img/kimmyscoffee/kimmyscoffee-contents3.jpg" alt="いつもの場所">
-            </div>
+        <div class="brand-back">
+            <a href="../index.html#brands" class="btn btn--primary">ブランド一覧へ戻る<span class="btn__arrow" aria-hidden="true">→</span></a>
         </div>
-
     </main>
 
-    <footer>
-        <p>&copy; 2026 つぼみ Inc.</p>
+    <!-- ================= フッター ================= -->
+    <footer class="site-footer">
+        <div class="inner">
+            <div class="site-footer__grid">
+                <div>
+                    <a href="../index.html" class="site-logo">
+                        <span class="site-logo__en">Tsubomi Inc.</span>
+                        <span class="site-logo__ja">つぼみ株式会社</span>
+                    </a>
+                    <p class="site-footer__concept">それぞれ心に持つ”つぼみ”が、<br>花開く場所を。</p>
+                </div>
+
+                <div>
+                    <h2 class="site-footer__heading">Brands</h2>
+                    <ul class="footer-list">
+                        <li class="footer-list__item">
+                            <a href="kimmyscoffee.html" class="footer-list__link" aria-current="page">@KIMMY'S COFFEE</a>
+                            <a href="https://www.instagram.com/kimmys_coffee/" class="footer-list__sns" target="_blank" rel="noopener" aria-label="@KIMMY'S COFFEE の Instagram">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.8" fill="currentColor" stroke="none"/></svg>
+                            </a>
+                        </li>
+                        <li class="footer-list__item">
+                            <a href="mame_to_kome.html" class="footer-list__link">mame to kome</a>
+                            <a href="https://www.instagram.com/mame__to__kome/" class="footer-list__sns" target="_blank" rel="noopener" aria-label="mame to kome の Instagram">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.8" fill="currentColor" stroke="none"/></svg>
+                            </a>
+                        </li>
+                        <li class="footer-list__item">
+                            <a href="caasiuna.html" class="footer-list__link">CAÄSIUNA</a>
+                            <a href="https://www.instagram.com/caasiuna/" class="footer-list__sns" target="_blank" rel="noopener" aria-label="CAÄSIUNA の Instagram">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.8" fill="currentColor" stroke="none"/></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="site-footer__heading">Menu</h2>
+                    <ul class="footer-list">
+                        <li><a href="../index.html#about" class="footer-list__link">会社概要</a></li>
+                        <li><a href="../index.html#brands" class="footer-list__link">事業一覧</a></li>
+                        <li><a href="../index.html#philosophy" class="footer-list__link">理念</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="site-footer__copy"><small>&copy; 2026 Tsubomi Inc.</small></p>
+        </div>
     </footer>
 
     <script src="../js/common.js"></script>

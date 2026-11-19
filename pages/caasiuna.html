@@ -3,99 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mame to kome | Tsubomi Inc.</title>
+    <title>CAÄSIUNA | Tsubomi Inc.</title>
+    <meta name="description" content="CAÄSIUNA｜人とのつながりを大切に、居心地のいい場所を。米粉パンとランチを楽しめる、つぼみ株式会社のカフェです。">
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap">
+
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/businessContens.css">
 </head>
-<body>
-    <header>
-        <div class="headerContents">
-            <h1 onclick="location.href='../index.html'" style="cursor:pointer;">Tsubomi Inc.</h1>
+<body data-brand="caasiuna">
+    <!-- ================= ヘッダー ================= -->
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="../index.html" class="site-logo" aria-label="Tsubomi Inc. トップページ">
+                <span class="site-logo__en">Tsubomi Inc.</span>
+                <span class="site-logo__ja">つぼみ株式会社</span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開く">
+                <span class="nav-toggle__line"></span>
+                <span class="nav-toggle__line"></span>
+            </button>
+
+            <nav class="global-nav" id="global-nav" aria-label="グローバルナビゲーション">
+                <ul class="global-nav__list">
+                    <li><a href="../index.html#about" class="global-nav__link"><span class="global-nav__en">About</span><span class="global-nav__ja">会社概要</span></a></li>
+                    <li><a href="../index.html#brands" class="global-nav__link"><span class="global-nav__en">Brands</span><span class="global-nav__ja">事業一覧</span></a></li>
+                    <li><a href="../index.html#philosophy" class="global-nav__link"><span class="global-nav__en">Philosophy</span><span class="global-nav__ja">理念</span></a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <section class="slideImages">
-        <div>
-            <div class="slide active" style="background-image: url('../img/caasiuna/caasiuna1.jpg');"></div>
-            <div class="slide" style="background-image: url('../img/caasiuna/caasiuna2.jpg');"></div>
-            <div class="slide" style="background-image: url('../img/caasiuna/caasiuna3.jpg');"></div>
-            <div class="slide" style="background-image: url('../img/caasiuna/caasiuna4.jpg');"></div>
+    <!-- ================= メインビジュアル ================= -->
+    <section class="hero hero--sub" aria-label="メインビジュアル">
+        <div class="hero__slides" aria-hidden="true">
+            <img class="hero__slide is-active" src="../img/caasiuna/caasiuna1.jpg" alt="" fetchpriority="high" decoding="async">
+            <img class="hero__slide" src="../img/caasiuna/caasiuna2.jpg" alt="" loading="lazy" decoding="async">
+            <img class="hero__slide" src="../img/caasiuna/caasiuna3.jpg" alt="" loading="lazy" decoding="async">
+            <img class="hero__slide" src="../img/caasiuna/caasiuna4.jpg" alt="" loading="lazy" decoding="async">
         </div>
-        <div class="slideImages-text">
-            <h2 class="slideImages-title">CAASIUNA</h2>
-            <p class="slideImages-subtitle">人とのつながりを大切に、<br>居心地のいい場所を</p>
+        <div class="hero__overlay"></div>
+        <div class="hero__text">
+            <p class="brand-hero__label">Brand 03</p>
+            <h1 class="hero__title">CAÄSIUNA</h1>
+            <p class="hero__subtitle">人とのつながりを大切に、<br>居心地のいい場所を</p>
         </div>
     </section>
 
-    <main class="container">
-        <div class="feature-container">
-            <div class="feature-text-box">
-                <p class="feature-text-sub-box">OUR STORY</p>
-                <div class="feature-text-main-box">
-                    <h3>ひとつのお店から、<br>一緒につくる場所へ。</h3>
-                    <p>
-                        CAÄSIUNAとの始まりは、オーナーの陽子さんとのご縁からでした。
-                        <br>
-                        KIMMY’S COFFEEとしてイベントやコラボを重ねる中で、人との繋がりを大切にする陽子さんの人柄や考え方、そしてその想いが空気となって広がるお店の雰囲気に惹かれていきました。
-                        そして、「人が自然と集まり、誰かの居場所になるような空間をつくりたい」という共通の想いがあることに気づいていきました。
-                        <br>
-                        そして2026年5月からは、KIMMY’S COFFEEも運営に加わり、陽子さんが大切に育ててきたCAÄSIUNAらしさを残しながら、共に歩みを進めています。
-                        <br>
-                        新しいメンバー、新しいランチ、そしてmame to komeの米粉パンやスイーツとともに。これからのCAÄSIUNAを、みんなで一緒につくり上げています。
-                    </p>
-                </div>
-            </div>
-            <div class="feature-img-box">
-                <img src="../img/caasiuna/caasiuna_contents1.jpg" alt="スペシャリティ">
+    <main>
+        <div class="section">
+            <div class="inner features">
+                <section class="feature fade-in">
+                    <div class="feature__media">
+                        <img src="../img/caasiuna/caasiuna_contents1.jpg" alt="スペシャリティ" loading="lazy" decoding="async">
+                    </div>
+                    <div class="feature__text">
+                        <p class="feature__label" data-num="01">Our Story</p>
+                        <h2 class="feature__title">ひとつのお店から、<br>一緒につくる場所へ。</h2>
+                        <div class="feature__body">
+                            <p>CAÄSIUNAとの始まりは、オーナーの陽子さんとのご縁からでした。</p>
+                            <p>KIMMY’S COFFEEとしてイベントやコラボを重ねる中で、人との繋がりを大切にする陽子さんの人柄や考え方、そしてその想いが空気となって広がるお店の雰囲気に惹かれていきました。そして、「人が自然と集まり、誰かの居場所になるような空間をつくりたい」という共通の想いがあることに気づいていきました。</p>
+                            <p>そして2026年5月からは、KIMMY’S COFFEEも運営に加わり、陽子さんが大切に育ててきたCAÄSIUNAらしさを残しながら、共に歩みを進めています。</p>
+                            <p>新しいメンバー、新しいランチ、そしてmame to komeの米粉パンやスイーツとともに。これからのCAÄSIUNAを、みんなで一緒につくり上げています。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="feature fade-in">
+                    <div class="feature__media">
+                        <img src="../img/caasiuna/caasiuna_contents2.jpg" alt="FOOD" loading="lazy" decoding="async">
+                    </div>
+                    <div class="feature__text">
+                        <p class="feature__label" data-num="02">Food &amp; Bread</p>
+                        <h2 class="feature__title">毎日のランチに、<br>やさしい選択肢を。</h2>
+                        <div class="feature__body">
+                            <p>CAÄSIUNAでは、スペイン出身のスタッフ・リディアが作る本場のスパニッシュオムレツやお肉屋さんのハンバーグなど、手作りの温かなお料理とともに、mame to komeで焼き上げる米粉パンをお楽しみいただけます。</p>
+                            <p>添える米粉パンは、「からだに優しいから」という理由だけではなく、ひとつのパンとしてお料理を引き立てるおいしさまで考えて作っています。</p>
+                            <p>また、お店で出会ったお気に入りのパンをご自宅でも楽しめるよう、ランチをご利用の方限定で米粉パンの冷凍テイクアウトもご用意しました。</p>
+                            <p>お店で味わう特別なランチタイムが、ご自宅の朝食や日々の食卓へとやさしく広がっていけば嬉しいです。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="feature fade-in">
+                    <div class="feature__media">
+                        <img src="../img/caasiuna/caasiuna_contents3.jpg" alt="SPACE" loading="lazy" decoding="async">
+                    </div>
+                    <div class="feature__text">
+                        <p class="feature__label" data-num="03">People &amp; Space</p>
+                        <h2 class="feature__title">いろんな「好き」が重なって、<br>この場所ができていく。</h2>
+                        <div class="feature__body">
+                            <p>CAÄSIUNAの空間をつくっているのは、私たちだけではありません。</p>
+                            <p>陽子さんの娘・じゅなちゃんがつくる子ども服ブランド「Litto」のやさしいお洋服、アーティストとしても活動するスタッフ・リディアが描く絵。そして、食やものづくりを通して出会った、さまざまな人たちとのコラボレーション。</p>
+                            <p>洋服が並んだり、絵が飾られたりしながら、その時々で新しい人やものが重なり、CAÄSIUNAという空間は少しずつ形づくられています。</p>
+                            <p>完成されたひとつの形を目指すのではなく、人との繋がりによって、やさしく変化し続けていく場所。食事をする人も、ものをつくる人も、ここを訪れるすべての人も。それぞれが自然と混ざり合える、そんなCAÄSIUNAでありたいと思っています。</p>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
 
-        <div class="feature-container">
-            <div class="feature-text-box">
-                <p class="feature-text-sub-box">FOOD & BREAD</p>
-                <div class="feature-text-main-box">
-                    <h3>毎日のランチに、<br>やさしい選択肢を。</h3>
-                    <p>
-                        CAÄSIUNAでは、スペイン出身のスタッフ・リディアが作る本場のスパニッシュオムレツやお肉屋さんのハンバーグなど、手作りの温かなお料理とともに、mame to komeで焼き上げる米粉パンをお楽しみいただけます。
-                        <br>
-                        添える米粉パンは、「からだに優しいから」という理由だけではなく、ひとつのパンとしてお料理を引き立てるおいしさまで考えて作っています。
-                        <br>
-                        また、お店で出会ったお気に入りのパンをご自宅でも楽しめるよう、ランチをご利用の方限定で米粉パンの冷凍テイクアウトもご用意しました。
-                        <br>
-                        お店で味わう特別なランチタイムが、ご自宅の朝食や日々の食卓へとやさしく広がっていけば嬉しいです。
-                    </p>
-                </div>
-            </div>
-            <div class="feature-img-box">
-                <img src="../img/caasiuna/caasiuna_contents2.jpg" alt="FOOD">
-            </div>
-        </div>
-
-        <div class="feature-container">
-            <div class="feature-text-box">
-                <p class="feature-text-sub-box">PEOPLE & SPACE</p>
-                <div class="feature-text-main-box">
-                    <h3>いろんな「好き」が重なって、<br>この場所ができていく。</h3>
-                    <p>
-                        CAÄSIUNAの空間をつくっているのは、私たちだけではありません。
-                        <br>
-                        陽子さんの娘・じゅなちゃんがつくる子ども服ブランド「Litto」のやさしいお洋服、アーティストとしても活動するスタッフ・リディアが描く絵。
-                        そして、食やものづくりを通して出会った、さまざまな人たちとのコラボレーション。
-                        <br>
-                        洋服が並んだり、絵が飾られたりしながら、その時々で新しい人やものが重なり、CAÄSIUNAという空間は少しずつ形づくられています。
-                        <br>
-                        完成されたひとつの形を目指すのではなく、人との繋がりによって、やさしく変化し続けていく場所。食事をする人も、ものをつくる人も、ここを訪れるすべての人も。それぞれが自然と混ざり合える、そんなCAÄSIUNAでありたいと思っています。
-                    </p>
-                </div>
-            </div>
-            <div class="feature-img-box">
-                <img src="../img/caasiuna/caasiuna_contents3.jpg" alt="SPACE">
-            </div>
+        <div class="brand-back">
+            <a href="../index.html#brands" class="btn btn--primary">ブランド一覧へ戻る<span class="btn__arrow" aria-hidden="true">→</span></a>
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2026 つぼみ Inc.</p>
+    <!-- ================= フッター ================= -->
+    <footer class="site-footer">
+        <div class="inner">
+            <div class="site-footer__grid">
+                <div>
+                    <a href="../index.html" class="site-logo">
+                        <span class="site-logo__en">Tsubomi Inc.</span>
+                        <span class="site-logo__ja">つぼみ株式会社</span>
+                    </a>
+                    <p class="site-footer__concept">それぞれ心に持つ”つぼみ”が、<br>花開く場所を。</p>
+                </div>
+
+                <div>
+                    <h2 class="site-footer__heading">Brands</h2>
+                    <ul class="footer-list">
+                        <li class="footer-list__item">
+                            <a href="kimmyscoffee.html" class="footer-list__link">@KIMMY'S COFFEE</a>
+                            <a href="https://www.instagram.com/kimmys_coffee/" class="footer-list__sns" target="_blank" rel="noopener" aria-label="@KIMMY'S COFFEE の Instagram">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.8" fill="currentColor" stroke="none"/></svg>
+                            </a>
+                        </li>
+                        <li class="footer-list__item">
+                            <a href="mame_to_kome.html" class="footer-list__link">mame to kome</a>
+                            <a href="https://www.instagram.com/mame__to__kome/" class="footer-list__sns" target="_blank" rel="noopener" aria-label="mame to kome の Instagram">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.8" fill="currentColor" stroke="none"/></svg>
+                            </a>
+                        </li>
+                        <li class="footer-list__item">
+                            <a href="caasiuna.html" class="footer-list__link" aria-current="page">CAÄSIUNA</a>
+                            <a href="https://www.instagram.com/caasiuna/" class="footer-list__sns" target="_blank" rel="noopener" aria-label="CAÄSIUNA の Instagram">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.8" fill="currentColor" stroke="none"/></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="site-footer__heading">Menu</h2>
+                    <ul class="footer-list">
+                        <li><a href="../index.html#about" class="footer-list__link">会社概要</a></li>
+                        <li><a href="../index.html#brands" class="footer-list__link">事業一覧</a></li>
+                        <li><a href="../index.html#philosophy" class="footer-list__link">理念</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="site-footer__copy"><small>&copy; 2026 Tsubomi Inc.</small></p>
+        </div>
     </footer>
 
     <script src="../js/common.js"></script>
